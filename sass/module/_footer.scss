@@ -1,0 +1,105 @@
+.footer {
+    background: $color-base;
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: 960px;
+        padding: 60px 0;
+        margin: 0 auto;
+        @include mq(sp) {
+            display: block;
+        }
+        .sns-list {
+            display: flex;
+            @include mq(sp) {
+                justify-content: center;
+            }
+            &-item + .sns-list-item{
+                margin-left: 32px;
+                @include mq(sp) {
+                    margin-left: 50px;
+                }
+            }
+            .sns-icon {
+                font-size: 36px;
+                color: $color-white;
+                opacity: .6;
+                transition: color .2s;
+            }
+            .fa-twitter:hover {
+                @include mq(pc) {
+                    color: #1c95e0;
+                }
+            }
+            .fa-facebook-square:hover {
+                @include mq(pc) {
+                    color: #3d5997;
+                }
+            }
+        }
+        .footer-link-list {
+            margin-top: 40px;
+            @include mq(sp) {
+                text-align: center;
+                margin-top: 42px;
+            }
+            &-item {
+                color: $color-white;
+                letter-spacing: .4px;
+                @include mq(sp) {
+                    font-size: 14px;
+                    letter-spacing: 0.35px;
+                }
+                a {
+                    padding-bottom: 1px;
+                    &:hover {
+                        @include mq(pc) {
+                            border-bottom: 1px solid $color-white;
+                        }
+                    }
+                }
+                & + .footer-link-list-item {
+                    margin-top: 24px;
+                    @include mq(sp) {
+                        margin-top: 26px;
+                    }
+                }
+            }
+        }
+        .footer-right {
+            text-align: right;
+            @include mq(sp) {
+                margin-top: 40px;
+                text-align: center;
+            }
+            .footer-logo {
+                font-family: $font-family-en;
+                font-size: 40px;
+                font-weight: 700;
+                color: $color-white;
+                @include mq(sp) {
+                    font-size: 32px;
+                }
+                a {
+                    transition: opacity .2s;
+                    &:hover {
+                        @include mq(pc) {
+                            opacity: $opacity;
+                        }
+                    }
+                }
+            }
+            .copyright {
+                display: inline-block;
+                margin-top: 10px;
+                font-size: 12px;
+                color: $color-white;
+                opacity: .6;
+                letter-spacing: .3px;
+                @include mq(sp) {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}

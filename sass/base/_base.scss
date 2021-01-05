@@ -1,0 +1,57 @@
+body {
+    font-family: $font-family-ja;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    color: $color-base;
+    background: $bg-body;
+}
+
+img {
+    width: 100%;
+}
+
+.inner {
+    width: 1200px;
+    max-width: 100%;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+    margin: 0 auto;
+    @include mq(sp) {
+        padding-right: $padding-sp;
+        padding-left: $padding-sp;
+        box-sizing: border-box;
+    }
+}
+
+.section-ttl {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: $font-family-en;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    @include mq(sp) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 30px;
+        line-height: (37 / 30);
+    }
+}
+
+.is-pc {
+    @include mq(sp) {
+        display: none;
+    }
+}
+
+.is-sp {
+    display: none;
+    @include mq(sp) {
+        display: block;
+    }
+}
+
+.drawer-overlay {
+    display: none;
+}

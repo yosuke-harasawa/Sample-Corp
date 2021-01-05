@@ -1,0 +1,43 @@
+// フォントファミリー
+$font-family-ja: '游ゴシック体', 'Hiragino Kaku Gothic Pro N', 'Meiryo', sans-serif;
+$font-family-en: 'Montserrat', 'Hiragino Kaku Gothic Pro N', 'Meiryo', sans-serif;
+
+// フォントサイズ
+$font-size-base: 16px;
+
+// フォントウェイト
+$font-weight-base: 500;
+
+// フォントカラー
+$color-base: #3E3E3E;
+$color-white: #fff;
+$color-main: #4973FF;
+
+// 背景色
+$bg-body: #F3F3F3;
+$bg-attention: #FF4646;
+$bg-btn-yellow: #FFAA3B;
+$bg-hover: #4973FF80;
+
+// ボーダーカラー
+$border-color: #707070;
+$border-color-hover: #3B69FF;
+
+// ボックスシャドウ
+$box-shadow-color: rgba(62, 62, 62, 0.2);
+
+// 透過
+$opacity: .8;
+
+// 余白
+$padding-pc: 40px;
+$padding-sp: 16px;
+
+// 階層
+$layer: (
+    hamburger: 30,
+    drawer: 30,
+    overlay: 20,
+    totop: 10,
+    header: 10,
+);

@@ -1,0 +1,98 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: map-get($layer, header);
+    @include mq(sp) {
+        position: fixed;
+        background: $color-white;
+    }
+    &-inner {
+        @include mq(sp) {
+            height: 68px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &-logo {
+        font-family: $font-family-en;
+        font-size: 23px;
+        font-weight: 700;
+    }
+    &-nav-list {
+        display: flex;
+        justify-content: center;
+        @include mq(sp) {
+            display: none;
+        }
+        &-item {
+            padding: 32px 0;
+            font-weight: 500;
+            letter-spacing: -.4px;
+            line-height: (19 / 16);
+            @include mq(sp) {
+                padding: 0;
+            }
+            & + .header-nav-list-item {
+                margin-left: 30px;
+                @include mq(sp) {
+                    margin-left: 0;
+                }
+            }
+            a {
+                padding: 6px;
+                font-family: $font-family-en;
+                @include mq(sp) {
+                    padding: 0;
+                }
+                &:hover {
+                    border-bottom: 1px solid $color-base;
+                }
+            }
+        }
+    }
+    .drawer-hamburger {
+        position: fixed;
+        width: 26px;
+        height: 20px;
+        padding: 24px 16px;
+        margin-left: auto;
+        background: url('../../img/sp/hamburger.svg') no-repeat center;
+        z-index: map-get($layer, hamburger);
+    }
+    .drawer-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: $color-base;
+            opacity: 0.7;
+            z-index: map-get($layer, overlay);
+    }
+}
+.drawer-nav {
+    @include mq(sp) {
+        z-index: map-get($layer, drawer);
+        .drawer-menu {
+            display: block;
+            margin-top: 160px;
+            &-item {
+                padding: 0;
+                text-align: center;
+                & + .drawer-menu-item {
+                    margin-top: 32px;
+                }
+                a {
+                    font-family: $font-family-en;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+.drawer-open .drawer-hamburger {
+    background: url('../../img/sp/batsu.svg') no-repeat center;
+}
